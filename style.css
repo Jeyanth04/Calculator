@@ -1,0 +1,42 @@
+.outer{
+    width:26%;
+    height: 70%;
+    margin-left: 37%;
+    margin-top: 8%;
+    border: 3px;
+    border-style: solid;
+    border-radius: 30px;
+    background-color: black;
+}
+.input{
+    margin-left: 55px;
+    margin-top: 30px;
+}
+input{
+    width: 260px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: end;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.butt{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+button{
+    margin-left: 28px;
+    padding: 15px;
+    border-radius: 70%;
+    font-size: x-large;
+    background-color:gray;
+    color: white;
+    border: none;
+    width: 50px;
+}
+button:hover{
+    cursor: pointer;
+}
