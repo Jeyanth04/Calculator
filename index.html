@@ -1,0 +1,65 @@
+<head><title>Calculator</title></head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <h1 style="text-align: center; margin-top: 30px;">CALCULATOR</h1>
+    <div class="outer">
+        <div class="input">
+            <input type="text" id="inp" placeholder="0">
+        </div>
+        <div class="butt">
+            <button id="but" onclick="clr()" style="background-color: lightsalmon;">C</button>
+            <button id="but" onclick="disp('(')" style="background-color: lightsalmon;">(</button>
+            <button id="but" onclick="disp(')')" style="background-color: lightsalmon;">)</button>
+            <button id="but" onclick="disp('/')" style="color:white; background-color: orangered;">/</button>
+           
+        </div>
+        <div class="butt">
+            <button id="but" onclick="disp(7)">7</button>
+            <button id="but" onclick="disp(8)">8</button>
+            <button id="but" onclick="disp(9)">9</button>
+            <button id="but" onclick="disp('*')" style="color:white; background-color: orangered;">*</button>
+        </div>
+        <div class="butt">
+            <button id="but" onclick="disp(4)">4</button>
+            <button id="but" onclick="disp(5)">5</button>
+            <button id="but" onclick="disp(6)">6</button>
+            <button id="but" onclick="disp('-')" style="color:white; background-color: orangered;">-</button>
+        </div>
+        <div class="butt">
+            <button id="but" onclick="disp(1)">1</button>
+            <button id="but" onclick="disp(2)">2</button>
+            <button id="but" onclick="disp(3)">3</button>
+            <button id="but" onclick="disp('+')"  style="color:white; background-color: orangered;">+</button>
+        </div>
+        <div class="butt">
+            <button id="but" onclick="delet()">D</button>
+            <button id="but" onclick="disp(0)">0</button>
+            <button id="but" onclick="disp('.')">.</button>
+            <button id="but" onclick="calculate()" style="color:white; background-color: orangered;">=</button>
+        </div>
+
+
+
+    </div>
+</body>
+<script>
+    var button=document.getElementById("but");
+    var input=document.getElementById("inp");
+    function disp(event){
+        input.value+=event
+    }
+    function clr(){
+        input.value=" ";
+    }
+    function calculate(){
+        try{
+            input.value=eval(input.value)
+        }
+        catch(error){
+            input.value='ERROR'
+        }
+    }
+    function delet(){
+        input.value=input.value.slice(0,-1);
+    }
+</script>
